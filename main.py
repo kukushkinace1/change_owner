@@ -13,12 +13,12 @@ from starknet_py.net.account.account import Account
 from starknet_py.net.models import StarknetChainId
 from starknet_py.net.signer.stark_curve_signer import KeyPair
 
-with open('address.txt', 'r') as proxy_file:
-    addresses = [line.strip() for line in proxy_file]
-with open('new_private_key.txt', 'r') as proxy_file:
-    new_private_key = [line.strip() for line in proxy_file]
-with open('old_private_key.txt', 'r') as proxy_file:
-    old_private_key = [line.strip() for line in proxy_file]
+with open('address.txt', 'r') as file:
+    addresses = [line.strip() for line in file]
+with open('new_private_key.txt', 'r') as file:
+    new_private_key = [line.strip() for line in file]
+with open('old_private_key.txt', 'r') as file:
+    old_private_key = [line.strip() for line in file]
 
 logger.remove()
 logger.add(stderr, format="<white>{time:HH:mm:ss}</white> | <level>{level: <3}</level> | <level>{message}</level>")
